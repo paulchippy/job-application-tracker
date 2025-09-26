@@ -63,6 +63,13 @@ dotnet run
 ```
 The API will be available at **http://localhost:5227** & Swagger UI will be accessible  at **http://localhost:5227/swagger/index.html**.
 
+#### Run the unit test cases:
+```sh
+cd JobApplicationTracker.API.UnitTests
+```
+```sh
+dotnet test
+```
 
 ### 3 Frontend Setup (React with Typescript)
 #### Install dependencies:

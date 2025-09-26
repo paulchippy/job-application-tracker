@@ -1,7 +1,7 @@
 import axios, { AxiosError } from "axios";
 import { JobApplication } from "../models/JobApplication";
 
-const API_URL = "https://localhost:5227/api/JobApplications";
+const API_URL = "http://localhost:5227/api/JobApplications";
 
 
 export interface PaginatedResponse<T> {
