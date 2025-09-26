@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobApplicationTracker.API", "JobApplicationTracker.API.csproj", "{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobApplicationTracker.API.UnitTests", "..\JobApplicationTracker.API.UnitTests\JobApplicationTracker.API.UnitTests.csproj", "{EA6B11F4-E72A-45EA-9D60-242136430676}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA6B11F4-E72A-45EA-9D60-242136430676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA6B11F4-E72A-45EA-9D60-242136430676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA6B11F4-E72A-45EA-9D60-242136430676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA6B11F4-E72A-45EA-9D60-242136430676}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1129AB5A-906D-438E-A57B-097EFFD02B7E}
+	EndGlobalSection
+EndGlobal

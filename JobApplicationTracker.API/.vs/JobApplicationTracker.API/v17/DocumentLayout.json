@@ -1,0 +1,274 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|c:\\users\\admin\\source\\repos\\jobapplicationtracker.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|c:\\users\\admin\\source\\repos\\jobapplicationtracker.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|c:\\users\\admin\\source\\repos\\jobapplicationtracker.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA6B11F4-E72A-45EA-9D60-242136430676}|..\\JobApplicationTracker.API.UnitTests\\JobApplicationTracker.API.UnitTests.csproj|c:\\users\\admin\\source\\repos\\jobapplicationtracker.api.unittests\\jobapplicationvalidatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|c:\\users\\admin\\source\\repos\\jobapplicationtracker.api\\jobapplicationtracker.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|solutionrelative:jobapplicationtracker.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|c:\\users\\admin\\source\\repos\\jobapplicationtracker.api\\services\\jobapplicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|solutionrelative:services\\jobapplicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|c:\\users\\admin\\source\\repos\\jobapplicationtracker.api\\services\\ijobapplicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|solutionrelative:services\\ijobapplicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|c:\\users\\admin\\source\\repos\\jobapplicationtracker.api\\validators\\jobapplicationvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|solutionrelative:validators\\jobapplicationvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|c:\\users\\admin\\source\\repos\\jobapplicationtracker.api\\repositories\\ijobapplicationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|solutionrelative:repositories\\ijobapplicationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|c:\\users\\admin\\source\\repos\\jobapplicationtracker.api\\repositories\\jobapplicationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|solutionrelative:repositories\\jobapplicationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|c:\\users\\admin\\source\\repos\\jobapplicationtracker.api\\models\\jobapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|solutionrelative:models\\jobapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|c:\\users\\admin\\source\\repos\\jobapplicationtracker.api\\controllers\\jobapplicationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|solutionrelative:controllers\\jobapplicationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|c:\\users\\admin\\source\\repos\\jobapplicationtracker.api\\middlewares\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|solutionrelative:middlewares\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|c:\\users\\admin\\source\\repos\\jobapplicationtracker.api\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D0883BA-B3AC-472C-9D9E-6901144FBCF1}|JobApplicationTracker.API.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA6B11F4-E72A-45EA-9D60-242136430676}|..\\JobApplicationTracker.API.UnitTests\\JobApplicationTracker.API.UnitTests.csproj|c:\\users\\admin\\source\\repos\\jobapplicationtracker.api.unittests\\jobapplicationservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AQIAABMAAAAAAAAAAAAewBsAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-26T08:06:41.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T08:05:54.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-26T08:05:50.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "JobApplicationValidatorTests.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API.UnitTests\\JobApplicationValidatorTests.cs",
+              "RelativeDocumentMoniker": "..\\JobApplicationTracker.API.UnitTests\\JobApplicationValidatorTests.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API.UnitTests\\JobApplicationValidatorTests.cs",
+              "RelativeToolTip": "..\\JobApplicationTracker.API.UnitTests\\JobApplicationValidatorTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T07:11:17.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "JobApplicationValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Validators\\JobApplicationValidator.cs",
+              "RelativeDocumentMoniker": "Validators\\JobApplicationValidator.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Validators\\JobApplicationValidator.cs",
+              "RelativeToolTip": "Validators\\JobApplicationValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T06:51:50.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "JobApplicationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Repositories\\JobApplicationRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\JobApplicationRepository.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Repositories\\JobApplicationRepository.cs",
+              "RelativeToolTip": "Repositories\\JobApplicationRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T06:45:10.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IJobApplicationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Repositories\\IJobApplicationRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IJobApplicationRepository.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Repositories\\IJobApplicationRepository.cs",
+              "RelativeToolTip": "Repositories\\IJobApplicationRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T06:45:05.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IJobApplicationService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Services\\IJobApplicationService.cs",
+              "RelativeDocumentMoniker": "Services\\IJobApplicationService.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Services\\IJobApplicationService.cs",
+              "RelativeToolTip": "Services\\IJobApplicationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T06:45:24.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JobApplicationService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Services\\JobApplicationService.cs",
+              "RelativeDocumentMoniker": "Services\\JobApplicationService.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Services\\JobApplicationService.cs",
+              "RelativeToolTip": "Services\\JobApplicationService.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAzwDUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T06:45:26.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "JobApplicationTracker.API.http",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\JobApplicationTracker.API.http",
+              "RelativeDocumentMoniker": "JobApplicationTracker.API.http",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\JobApplicationTracker.API.http",
+              "RelativeToolTip": "JobApplicationTracker.API.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-09-26T06:51:57.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "JobApplication.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Models\\JobApplication.cs",
+              "RelativeDocumentMoniker": "Models\\JobApplication.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Models\\JobApplication.cs",
+              "RelativeToolTip": "Models\\JobApplication.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAUwCcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T06:44:49.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "JobApplicationsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Controllers\\JobApplicationsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\JobApplicationsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Controllers\\JobApplicationsController.cs",
+              "RelativeToolTip": "Controllers\\JobApplicationsController.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAAwDIAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T06:43:36.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "Middlewares\\ExceptionHandlingMiddleware.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "RelativeToolTip": "Middlewares\\ExceptionHandlingMiddleware.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAoAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T06:44:41.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T06:44:35.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "JobApplicationServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API.UnitTests\\JobApplicationServiceTests.cs",
+              "RelativeDocumentMoniker": "..\\JobApplicationTracker.API.UnitTests\\JobApplicationServiceTests.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\JobApplicationTracker.API.UnitTests\\JobApplicationServiceTests.cs",
+              "RelativeToolTip": "..\\JobApplicationTracker.API.UnitTests\\JobApplicationServiceTests.cs",
+              "ViewState": "AQIAAKkAAAAAAAAAAAAUwMgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T06:36:20.016Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
