@@ -1,7 +1,7 @@
 # Job Application Tracker
 
 ## Overview
-This is a **full-stack job application tracker** built using **ASP.NET Core Web API** for the backend and **React (Create React App) with TypeScript + Material UI** for the frontend.
+This project is a complete job application tracking system built as a full-stack monorepo. The backend is a RESTful API developed with ASP.NET Core and Entity framework core, and the frontend is a modern client application built with React and TypeScript (CRA), styled using Material UI.
 
 ## Features
 - **List all job applications** in a paginated table
@@ -20,19 +20,18 @@ This is a **full-stack job application tracker** built using **ASP.NET Core Web 
 ## Tech Stack
 ### Backend
 - **ASP.NET Core Web API (.NET 8)**
-- **Entity Framework Core (Code First with In-Memory or SQLite)**
-- **Repository & Service Layer Architecture**
+- **Entity Framework Core Code First with In-Memory Database**
+- **Repository & Dependency Injection Architecture**
 - **Dependency Injection**
 - **FluentValidation for validation**
 - **Swagger UI for API documentation**
-- **xUnit for unit testing**
+- **xUnit + moq for unit testing**
 
 ### Frontend
 - **React (Create React App) with TypeScript**
 - **Material UI for UI Components**
 - **Axios for API Calls**
 - **Pagination & client-side validation**
-- **Status management matching backend enum (Applied, Interviewing, Offered, Rejected)**
 
 ## Prerequisites
 - **.NET 8 SDK** (for the backend)
@@ -55,12 +54,14 @@ cd JobApplicationTracker.API
 ```
 ```sh
 dotnet restore
+dotnet build
 ```
+
 #### Run the API:
 ```sh
 dotnet run
 ```
-The API will be available at **http://localhost:5000** & Swagger UI will be available at **http://localhost:5000/swagger/index.html**.
+The API will be available at **http://localhost:5000** & Swagger UI will be accessible  at **http://localhost:5000/swagger/index.html**.
 
 
 ### 3 Frontend Setup (React with Typescript)
