@@ -43,32 +43,41 @@ This is a **full-stack job application tracker** built using **ASP.NET Core Web 
 
 ### 1 Clone the Repository
 ```sh
-git clone https://github.com/paulchippy/job-application-tracker-project.git
-cd job-application-tracker-project
-2 Backend Setup (.NET 8 API)
-Install dependencies:
-sh
-Copy code
-cd JobApplicationTracker.API
-dotnet restore
-Run the API:
-sh
-Copy code
-dotnet run
-The API will be available at http://localhost:5000
-Swagger UI will be available at http://localhost:5000/swagger/index.html
 
-3 Frontend Setup (React CRA)
-Install dependencies:
-sh
-Copy code
+git clone https://github.com/paulchippy/job-application-tracker.git
+cd job-application-tracker
+```
+
+### 2 Backend Setup (.NET 8 API)
+#### Install dependencies:
+```sh
+cd JobApplicationTracker.API
+```
+```sh
+dotnet restore
+```
+#### Run the API:
+```sh
+dotnet run
+```
+The API will be available at **http://localhost:5000** & Swagger UI will be available at **http://localhost:5000/swagger/index.html**.
+
+
+### 3 Frontend Setup (React with Typescript)
+#### Install dependencies:
+```sh
 cd ../job-app-tracker-frontend
+```
+```sh
 npm install
-Run the frontend:
-sh
-Copy code
-npm start
-The frontend will be available at http://localhost:3000
+```
+#### Run the frontend:
+```sh
+npm run start
+```
+The frontend will be available at **http://localhost:3000**.
+
+---
 
 Author
 Chippy Paul
