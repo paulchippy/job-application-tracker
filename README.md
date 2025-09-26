@@ -61,7 +61,7 @@ dotnet build
 ```sh
 dotnet run
 ```
-The API will be available at **http://localhost:5000** & Swagger UI will be accessible  at **http://localhost:5000/swagger/index.html**.
+The API will be available at **http://localhost:5227** & Swagger UI will be accessible  at **http://localhost:5227/swagger/index.html**.
 
 
 ### 3 Frontend Setup (React with Typescript)
