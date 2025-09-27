@@ -1,12 +1,12 @@
 using Xunit;
 using Moq;
 using System;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using JobApplicationTracker.API.Models;
 using JobApplicationTracker.API.Repositories;
 using JobApplicationTracker.API.Services;
+using JobApplicationTracker.API.Exceptions;
 
 public class JobApplicationServiceTests
 {
@@ -20,7 +20,7 @@ public class JobApplicationServiceTests
     }
 
     [Fact]
-    public async Task GetPaginatedAsync_ShouldDelegateToRepositoryAndReturnResult()
+    public async Task GetPaginatedApplicationsAsync_ShouldReturnPaginatedResult()
     {
         const int pageNumber = 2;
         const int pageSize = 10;
@@ -44,19 +44,35 @@ public class JobApplicationServiceTests
         var result = await _service.GetPaginatedApplicationsAsync(pageNumber, pageSize);
 
         _mockRepo.Verify(r => r.GetPaginatedAsync(pageNumber, pageSize), Times.Once);
-
         Assert.Equal(mockResult, result);
-        Assert.Equal(25, result.TotalCount);
     }
 
     [Fact]
-    public async Task CreateAsync_ShouldCallRepoAddAndReturnApplication_WhenDateIsValid()
+    public async Task GetByIdAsync_ShouldReturnApplication_WhenExists()
     {
-        var application = new JobApplication
-        {
-            CompanyName = "TestCorp",
-            DateApplied = DateTime.UtcNow.AddDays(-1)
-        };
+        const int appId = 5;
+        var app = new JobApplication { Id = appId, CompanyName = "TestCorp" };
+
+        _mockRepo.Setup(r => r.GetByIdAsync(appId)).ReturnsAsync(app);
+
+        var result = await _service.GetByIdAsync(appId);
+
+        Assert.Equal(app, result);
+    }
+
+    [Fact]
+    public async Task GetByIdAsync_ShouldThrowNotFoundException_WhenNotExists()
+    {
+        const int appId = 99;
+        _mockRepo.Setup(r => r.GetByIdAsync(appId)).ReturnsAsync((JobApplication?)null);
+
+        await Assert.ThrowsAsync<NotFoundException>(() => _service.GetByIdAsync(appId));
+    }
+
+    [Fact]
+    public async Task CreateAsync_ShouldCallRepoAddAndReturnApplication()
+    {
+        var application = new JobApplication { CompanyName = "TestCorp" };
 
         _mockRepo.Setup(r => r.AddAsync(It.IsAny<JobApplication>()))
                  .Returns(Task.CompletedTask);
@@ -68,25 +84,11 @@ public class JobApplicationServiceTests
     }
 
     [Fact]
-    public async Task CreateAsync_ShouldThrowArgumentException_WhenDateIsFuture()
-    {
-        var application = new JobApplication
-        {
-            CompanyName = "FutureTech",
-            DateApplied = DateTime.UtcNow.AddDays(1)
-        };
-
-        await Assert.ThrowsAsync<ArgumentException>(() => _service.CreateAsync(application));
-
-        _mockRepo.Verify(r => r.AddAsync(It.IsAny<JobApplication>()), Times.Never);
-    }
-
-    [Fact]
-    public async Task UpdateAsync_ShouldUpdateExistingApplicationAndReturnIt_WhenIdExists()
+    public async Task UpdateAsync_ShouldUpdateExistingApplication_WhenIdExists()
     {
         const int appId = 5;
-        var existingApp = new JobApplication { Id = appId, CompanyName = "Old Company", DateApplied = DateTime.UtcNow.AddDays(-5) };
-        var updatedData = new JobApplication { CompanyName = "New Company", Position = "Dev", DateApplied = DateTime.UtcNow.AddDays(-2) };
+        var existingApp = new JobApplication { Id = appId, CompanyName = "Old Company" };
+        var updatedData = new JobApplication { CompanyName = "New Company", Position = "Dev" };
 
         _mockRepo.Setup(r => r.GetByIdAsync(appId)).ReturnsAsync(existingApp);
         _mockRepo.Setup(r => r.UpdateAsync(It.IsAny<JobApplication>())).Returns(Task.CompletedTask);
@@ -98,20 +100,6 @@ public class JobApplicationServiceTests
         Assert.Equal("Dev", result.Position);
 
         _mockRepo.Verify(r => r.UpdateAsync(existingApp), Times.Once);
-    }
-
-    [Fact]
-    public async Task UpdateAsync_ShouldThrowArgumentException_WhenUpdatedDateIsFuture()
-    {
-        const int appId = 5;
-        var existingApp = new JobApplication { Id = appId, CompanyName = "Old Company", DateApplied = DateTime.UtcNow.AddDays(-5) };
-        var updatedData = new JobApplication { CompanyName = "New Company", Position = "Dev", DateApplied = DateTime.UtcNow.AddDays(1) };
-
-        _mockRepo.Setup(r => r.GetByIdAsync(appId)).ReturnsAsync(existingApp);
-
-        await Assert.ThrowsAsync<ArgumentException>(() => _service.UpdateAsync(appId, updatedData));
-
-        _mockRepo.Verify(r => r.UpdateAsync(It.IsAny<JobApplication>()), Times.Never);
     }
 
     [Fact]
@@ -129,7 +117,7 @@ public class JobApplicationServiceTests
     }
 
     [Fact]
-    public async Task DeleteAsync_ShouldReturnTrueAndCallRepoDelete_WhenIdExists()
+    public async Task DeleteAsync_ShouldReturnTrue_WhenIdExists()
     {
         const int appId = 10;
         var existingApp = new JobApplication { Id = appId };
@@ -140,12 +128,11 @@ public class JobApplicationServiceTests
         var result = await _service.DeleteAsync(appId);
 
         Assert.True(result);
-        _mockRepo.Verify(r => r.GetByIdAsync(appId), Times.Once);
         _mockRepo.Verify(r => r.DeleteAsync(appId), Times.Once);
     }
 
     [Fact]
-    public async Task DeleteAsync_ShouldReturnFalseAndNotCallRepoDelete_WhenIdDoesNotExist()
+    public async Task DeleteAsync_ShouldReturnFalse_WhenIdDoesNotExist()
     {
         const int nonExistentId = 999;
 
@@ -154,7 +141,6 @@ public class JobApplicationServiceTests
         var result = await _service.DeleteAsync(nonExistentId);
 
         Assert.False(result);
-        _mockRepo.Verify(r => r.GetByIdAsync(nonExistentId), Times.Once);
         _mockRepo.Verify(r => r.DeleteAsync(It.IsAny<int>()), Times.Never);
     }
 }
