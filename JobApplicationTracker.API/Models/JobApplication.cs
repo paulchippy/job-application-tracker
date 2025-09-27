@@ -24,17 +24,12 @@ namespace JobApplicationTracker.API.Models
     {
         public int Id { get; set; }
 
-        [Required]
-        [StringLength(100)]
         public string CompanyName { get; set; }
 
-        [Required]
-        [StringLength(100)]
         public string Position { get; set; }
 
         public ApplicationStatus Status { get; set; }
 
-        [Required]
         public DateTime DateApplied { get; set; }
     }
 }

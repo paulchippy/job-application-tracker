@@ -10,68 +10,86 @@ public class JobApplicationValidatorTests
 
     public JobApplicationValidatorTests()
     {
-        // ARRANGE: Instantiate the validator once for all tests
         _validator = new JobApplicationValidator();
     }
 
     // --- CompanyName Tests ---
-
     [Fact]
     public void CompanyName_ShouldHaveError_WhenEmpty()
     {
-        // ACT & ASSERT
         var model = new JobApplication { CompanyName = "" };
         var result = _validator.TestValidate(model);
-
         result.ShouldHaveValidationErrorFor(x => x.CompanyName)
-              .WithErrorMessage("Company Name is required");
+              .WithErrorMessage("Company Name value is required");
     }
 
     [Fact]
-    public void CompanyName_ShouldHaveError_WhenExceedsMaxLength()
+    public void CompanyName_ShouldHaveError_WhenTooShort()
     {
-        // ACT & ASSERT
+        var model = new JobApplication { CompanyName = "A" };
+        var result = _validator.TestValidate(model);
+        result.ShouldHaveValidationErrorFor(x => x.CompanyName)
+              .WithErrorMessage("Company Name must be at least 2 characters long.");
+    }
+
+    [Fact]
+    public void CompanyName_ShouldHaveError_WhenTooLong()
+    {
         var model = new JobApplication { CompanyName = new string('A', 101) };
         var result = _validator.TestValidate(model);
-
-        result.ShouldHaveValidationErrorFor(x => x.CompanyName);
-        // Note: FluentValidation doesn't use the custom message for MaxLength unless specified
+        result.ShouldHaveValidationErrorFor(x => x.CompanyName)
+              .WithErrorMessage("Company Name should not exceed 100 characters.");
     }
 
     [Fact]
     public void CompanyName_ShouldNotHaveError_WhenValid()
     {
-        // ACT & ASSERT
         var model = new JobApplication { CompanyName = "Google" };
         var result = _validator.TestValidate(model);
-
         result.ShouldNotHaveValidationErrorFor(x => x.CompanyName);
     }
 
     // --- Position Tests ---
-
     [Fact]
     public void Position_ShouldHaveError_WhenEmpty()
     {
-        // ACT & ASSERT
         var model = new JobApplication { Position = "" };
         var result = _validator.TestValidate(model);
-
         result.ShouldHaveValidationErrorFor(x => x.Position)
-              .WithErrorMessage("Position is required");
+              .WithErrorMessage("Position value is required");
     }
 
-    // ... Add Position MaxLength test similar to CompanyName ...
+    [Fact]
+    public void Position_ShouldHaveError_WhenTooShort()
+    {
+        var model = new JobApplication { Position = "A" };
+        var result = _validator.TestValidate(model);
+        result.ShouldHaveValidationErrorFor(x => x.Position)
+              .WithErrorMessage("Position must be at least 2 characters long.");
+    }
 
-    // --- Status Tests (Assuming ApplicationStatus is your enum) ---
+    [Fact]
+    public void Position_ShouldHaveError_WhenTooLong()
+    {
+        var model = new JobApplication { Position = new string('B', 101) };
+        var result = _validator.TestValidate(model);
+        result.ShouldHaveValidationErrorFor(x => x.Position)
+              .WithErrorMessage("Position should not exceed 100 characters.");
+    }
 
+    [Fact]
+    public void Position_ShouldNotHaveError_WhenValid()
+    {
+        var model = new JobApplication { Position = "Senior Engineer" };
+        var result = _validator.TestValidate(model);
+        result.ShouldNotHaveValidationErrorFor(x => x.Position);
+    }
+
+    // --- Status Tests ---
     [Fact]
     public void Status_ShouldNotHaveError_WhenValidEnumValue()
     {
-        // ARRANGE: Use a valid enum value (assuming 1 is a valid enum value like Submitted)
-        var model = new JobApplication { Status = (ApplicationStatus)1 };
-
-        // ACT & ASSERT
+        var model = new JobApplication { Status = ApplicationStatus.Applied };
         var result = _validator.TestValidate(model);
         result.ShouldNotHaveValidationErrorFor(x => x.Status);
     }
@@ -79,24 +97,18 @@ public class JobApplicationValidatorTests
     [Fact]
     public void Status_ShouldHaveError_WhenInvalidEnumValue()
     {
-        // ARRANGE: Use an integer that is NOT a defined enum value (e.g., 99)
+        // Cast an integer outside the defined enum range
         var model = new JobApplication { Status = (ApplicationStatus)99 };
-
-        // ACT & ASSERT
         var result = _validator.TestValidate(model);
         result.ShouldHaveValidationErrorFor(x => x.Status)
-              .WithErrorMessage("Invalid status");
+              .WithErrorMessage("Status must be one of the following: Applied, Interviewing, Offered, Rejected.");
     }
 
     // --- DateApplied Tests ---
-
     [Fact]
     public void DateApplied_ShouldHaveError_WhenInTheFuture()
     {
-        // ARRANGE: Set the date to tomorrow
         var model = new JobApplication { DateApplied = DateTime.Today.AddDays(1) };
-
-        // ACT & ASSERT
         var result = _validator.TestValidate(model);
         result.ShouldHaveValidationErrorFor(x => x.DateApplied)
               .WithErrorMessage("Date cannot be in the future");
@@ -105,10 +117,7 @@ public class JobApplicationValidatorTests
     [Fact]
     public void DateApplied_ShouldNotHaveError_WhenToday()
     {
-        // ARRANGE
         var model = new JobApplication { DateApplied = DateTime.Today };
-
-        // ACT & ASSERT
         var result = _validator.TestValidate(model);
         result.ShouldNotHaveValidationErrorFor(x => x.DateApplied);
     }
@@ -116,10 +125,7 @@ public class JobApplicationValidatorTests
     [Fact]
     public void DateApplied_ShouldNotHaveError_WhenInThePast()
     {
-        // ARRANGE
         var model = new JobApplication { DateApplied = DateTime.Today.AddDays(-5) };
-
-        // ACT & ASSERT
         var result = _validator.TestValidate(model);
         result.ShouldNotHaveValidationErrorFor(x => x.DateApplied);
     }

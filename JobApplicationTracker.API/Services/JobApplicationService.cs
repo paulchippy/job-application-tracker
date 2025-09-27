@@ -1,8 +1,6 @@
 ﻿using JobApplicationTracker.API.Models;
 using JobApplicationTracker.API.Repositories;
-using System; // Required for DateTime.UtcNow and ArgumentException
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using JobApplicationTracker.API.Exceptions;
 
 namespace JobApplicationTracker.API.Services
 {
@@ -21,15 +19,19 @@ namespace JobApplicationTracker.API.Services
             return await _repo.GetPaginatedAsync(pageNumber, pageSize);
         }
 
-        public async Task<JobApplication> GetByIdAsync(int id) => await _repo.GetByIdAsync(id);
+        public async Task<JobApplication?> GetByIdAsync(int id)
+        {
+            var application = await _repo.GetByIdAsync(id);
+ 
+            if (application == null)
+            {
+                throw new NotFoundException($"Job application with ID {id} is not found.");
+            }
+            return application;
+        }
 
         public async Task<JobApplication> CreateAsync(JobApplication application)
         {
-            if (application.DateApplied.Date > DateTime.UtcNow.Date)
-            {
-                throw new ArgumentException("DateApplied cannot be in the future");
-            }
-
             await _repo.AddAsync(application);
             return application;
         }
@@ -38,11 +40,6 @@ namespace JobApplicationTracker.API.Services
         {
             var existing = await _repo.GetByIdAsync(id);
             if (existing == null) return null;
-
-            if (application.DateApplied.Date > DateTime.UtcNow.Date)
-            {
-                throw new ArgumentException("DateApplied cannot be in the future");
-            }
 
             existing.CompanyName = application.CompanyName;
             existing.Position = application.Position;

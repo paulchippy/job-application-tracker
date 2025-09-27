@@ -1,3 +1,4 @@
+using JobApplicationTracker.API.Exceptions;
 using JobApplicationTracker.API.Models;
 using JobApplicationTracker.API.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -36,7 +37,9 @@ namespace JobApplicationTracker.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(JobApplication jobApplication)
         {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
+            if (!ModelState.IsValid)
+                return BadRequest(new { status = 400, error = "invalid fields in job application data.", details = ModelState });
+
             var created = await _jobApplicationService.CreateAsync(jobApplication);
             return CreatedAtAction(nameof(Get), new { id = created.Id }, created);
         }
@@ -44,12 +47,14 @@ namespace JobApplicationTracker.API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, JobApplication application)
         {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
+            if (!ModelState.IsValid)
+                return BadRequest(new { status = 400, error = "invalid fields in job application data.", details = ModelState });
 
             if (id != application.Id)
             {
                 return BadRequest("ID mismatch.");
             }
+
             var updated = await _jobApplicationService.UpdateAsync(id, application);
             return updated == null ? NotFound() : Ok(updated);
         }

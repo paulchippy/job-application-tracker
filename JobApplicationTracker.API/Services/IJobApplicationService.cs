@@ -8,7 +8,7 @@ namespace JobApplicationTracker.API.Services
     {
         Task<PaginatedResult<JobApplication>> GetPaginatedApplicationsAsync(int pageNumber, int pageSize);
 
-        Task<JobApplication> GetByIdAsync(int id);
+        Task<JobApplication?> GetByIdAsync(int id);
         Task<JobApplication> CreateAsync(JobApplication application);
 
         Task<JobApplication?> UpdateAsync(int id, JobApplication application);

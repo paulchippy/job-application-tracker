@@ -16,9 +16,7 @@ namespace JobApplicationTracker.API.Repositories
         public async Task<PaginatedResult<JobApplication>> GetPaginatedAsync(int pageNumber, int pageSize)
         {
             var query = _context.JobApplications.AsNoTracking().AsQueryable();
-
             var totalCount = await query.CountAsync();
-
             var items = await query.OrderByDescending(a => a.DateApplied)
                         .Skip((pageNumber - 1) * pageSize)
                         .Take(pageSize)
@@ -34,7 +32,7 @@ namespace JobApplicationTracker.API.Repositories
             };
         }
 
-        public async Task<JobApplication> GetByIdAsync(int id) =>
+        public async Task<JobApplication?> GetByIdAsync(int id) =>
             await _context.JobApplications.FindAsync(id);
 
         public async Task AddAsync(JobApplication application)
